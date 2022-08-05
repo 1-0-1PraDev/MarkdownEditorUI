@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,500;1,600&family=Open+Sans:wght@400;500;600;700;800&family=Raleway:wght@200;300;500;600;700;800&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+}
+
+:root {
+    --body-bg: #0e0e0e;
+    --main-bg: #35383f;
+    --top-file-bar-bg: rgba(44, 45, 49, 1);
+    --save-btn-bg: #e6663f;
+    --tab-bg: rgba(30, 31, 35, 1);
+    --editor-bg: #15161a;
+    --faint-text-clr: #a5a6aa;
+    --text-clr: #feffff;
+    --menu-bg: #35383f;
+}
+
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--save-btn-bg) var(--body-bg);
+  }
+  
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: var(--save-btn-bg);
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: var(--body-bg);
+  }
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+    /* background: var(--body-bg); */
+    width: 100vw;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    overflow-x: hidden;
+
+}
+
+.main-container .container{
+    position: relative;
+}
+
+/* side menu styling */
+.side-menu{
+    position: fixed;
+    top: 5.5rem;
+    left: -300px;
+    width: 300px;
+    /* padding: 1rem; */
+    height: 100%;
+    background: var(--top-file-bar-bg);
+    color: var(--text-clr);
+    z-index: 9999999;
+    transition: 0.5s;
+}
+
+.side-menu.active{
+    left: 0;
+    box-shadow: 10px 0px 30px rgba(30, 31, 35, 0.7);
+}
+
+.side-menu .about-editor{
+    padding: 1.5rem;
+}
+
+.side-menu .select-themes{
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.side-menu .select-themes li{
+    font-size: 1.4rem;  
+    display: flex;
+    gap: 0.7rem;
+    align-items: center;
+    cursor: pointer;
+    padding: 0.8rem 0.5rem;
+}
+
+
+.side-menu .select-themes li:hover{
+    background: var(--save-btn-bg);
+}
+
+
+/* html{
+    filter: invert(0) hue-rotate(-160deg); 
+} */
+
+.main-container .container .editor .topBar {
+    display: flex;
+    padding: 1rem 0.5rem;
+    width: 100%;
+    position: fixed;
+    z-index: 999999999;
+    justify-content: space-between;
+    background: var(--top-file-bar-bg);
+    box-shadow: 10px 10px 23px rgba(30, 31, 35, 0.7);
+}
+
+.main-container .container .editor .topBar .leftBx {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container .container .editor .topBar .leftBx .menuBx {
+    background: var(--menu-bg);
+    padding: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container .container .editor .topBar .leftBx .menuBx span{
+    color: var(--text-clr);
+    font-size: 1.9rem;
+    cursor: pointer;
+}
+
+/* .main-container .container .editor .topBar .leftBx .menuBx .bar {
+    position: relative;
+    width: 46px;
+    height: 3px;
+    background: #fff;
+    box-shadow: 0px 14px 0px 0.008rem #fff;
+}
+
+.main-container .container .editor .topBar .leftBx .menuBx .bar::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px -14px 0px 0.008rem #fff;
+} */
+
+.main-container .container .editor .topBar .leftBx .main-heading {
+    text-transform: uppercase;
+    color: var(--faint-text-clr);
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    padding: 0rem 1.2rem;
+    border-right: 2px solid var(--faint-text-clr);
+}
+
+.main-container .container .editor .topBar .leftBx .file-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0rem 2rem;
+}
+
+.main-container .container .editor .topBar .leftBx .file-details .file-name-cont p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.8rem;
+    margin: 0.2rem 0rem;
+}
+
+.main-container .container .editor .topBar .leftBx .file-details .iconBx {
+    color: var(--faint-text-clr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container .container .editor .topBar .leftBx .file-details .file-name-cont h3 {
+    color: var(--faint-text-clr);
+}
+
+.main-container .container .editor .topBar .rightBx {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.main-container .container .editor .topBar .rightBx .deleteIcon {
+    color: var(--faint-text-clr);
+    cursor: pointer;
+}
+
+.save-btn {
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem;
+    border-radius: 3px;
+    background: var(--save-btn-bg);
+}
+
+
+/* Content Container Styling */
+.editor .content-container{
+    display: grid;
+    height: 100vh;
+    padding-top: 5.5rem;
+    position: relative;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.editor .content-container.active::before{
+    content: "";
+    position: fixed;
+    top: 5.5rem;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); 
+}
+
+.editor .content-container .markdown{
+    border-right: 5px solid var(--faint-text-clr);
+    background:var(--editor-bg);
+    color: var(--faint-text-clr);
+}
+
+.editor .content-container .top-header{
+    width: 100%;
+    background: var(--tab-bg);
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.editor .content-container .top-header span{
+    color: var(--faint-text-clr);
+    cursor: pointer;
+}
+
+.editor .content-container .main-heading-small{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--faint-text-clr);
+    background: var(--tab-bg);
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+.editor .content-container .editor-text, .preview-text{
+    padding: 1rem;
+}
+
+
+/* // Median Queries */
+@media(max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+
+    /* // make editor responsive */
+    .editor .content-container{
+        grid-template-columns: 1fr;
+    }
+
+    .editor .content-container .markdown{
+        border: none;
+    }
+
+    .main-container .container .editor .topBar .leftBx .main-heading {
+        display: none;
+    }
+
+    .main-container .container .editor .topBar .leftBx .file-details .file-name-cont p {
+        display: none;
+    }
+
+
+    .main-container .container .editor .topBar .leftBx .file-details {
+        gap: 0.4rem;
+        padding: 0rem 0.4rem;
+        font-size: 1.6rem;
+    }
+
+
+    .main-container .container .editor .topBar .leftBx .file-details .iconBx span {
+        font-size: 2.4rem;
+
+    }
+
+    .save-btn .btn-text {
+        display: none;
+    }
+
+    .main-container .container .editor .topBar .leftBx .menuBx .bar {
+        width: 35px;
+        height: 3px;
+        background: #fff;
+        box-shadow: 0px 10px 0px 0.008rem #fff;
+    }
+
+    .main-container .container .editor .topBar .rightBx .deleteIcon span {
+        font-size: 2.4rem;
+    }
+
+    .main-container .container .editor .topBar .leftBx .menuBx .bar::before {
+        box-shadow: 0px -10px 0px 0.008rem #fff;
+    }
+
+}
+
+@media(max-width: 370px) {
+    html {
+        font-size: 13px;
+    }
+    .main-container .container .editor .topBar {
+        flex-wrap: wrap;
+        gap: 0.7rem;
+        padding: 1rem;
+        align-items: center;
+    }
+
+    .main-container .container .editor .topBar .rightBx {
+        width: 100%;
+        gap: 2rem;
+        padding: 0.4rem 0;
+        border-top: 1px solid var(--faint-text-clr);
+        justify-content: center;
+    }
+
+    .side-menu.active{
+        width: 100%;
+        top: 9.8rem;
+    }
+}
