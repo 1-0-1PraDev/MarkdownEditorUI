@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarkDown Editor Using JavaScript</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="container">
+            <div class="editor" id="editor">
+                <div class="topBar">
+                    <div class="leftBx">
+                        <div class="menuBx">
+                            <span class="material-symbols-rounded">
+                                menu
+                            </span>
+                        </div>
+                        <div class="main-heading">
+                            <h1>markdown</h1>
+                        </div>
+                        <div class="file-details">
+                            <div class="iconBx">
+                                <span class="material-symbols-rounded">
+                                    draft
+                                </span>
+                            </div>
+                            <div class="file-name-cont">
+                                <p>Document name</p>
+                                <h3 class="file-name"><span contenteditable="true">welcome</span>.md</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rightBx">
+                        <div class="deleteIcon">
+                            <span class="material-symbols-rounded">
+                                delete
+                            </span>
+                        </div>
+                        <a href="#" class="save-btn">
+                            <span class="material-symbols-rounded">
+                                save
+                            </span>
+                            <span class="btn-text">Save Changes</span>
+                        </a>
+                    </div>
+
+                </div>
+
+
+                <div class="content-container">
+                    <div class="markdown">
+                        <div class="top-header">
+                            <p class="main-heading-small">markdown</p>
+                        </div>
+                        <div class="editor-text">
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt aperiam voluptas
+                                labore praesentium quasi necessitatibus sed cupiditate quas consectetur, voluptatem
+                                tempore ipsum esse hic quae sit mollitia fuga aspernatur debitis fugit quisquam eum
+                                temporibus porro error dicta. Amet recusandae voluptate maxime, reprehenderit voluptates
+                                atque enim illum vel cum officia quos rem obcaecati iste qui. Quaerat necessitatibus
+                                rerum, placeat exercitationem ratione aut cupiditate suscipit sint asperiores enim dicta
+                                delectus cumque quia rem veritatis ad voluptatum ex nam ut adipisci! Unde hic nemo amet,
+                                aperiam porro quam! Sit magni in dolorem mollitia repudiandae ratione assumenda cumque
+                                odio minus, consequuntur sed illum sequi facilis ipsum recusandae deleniti nobis dolore
+                                id. At animi dolor beatae facilis perferendis, architecto ipsum, sunt eveniet illo,
+                                culpa alias libero tenetur excepturi ipsa itaque voluptatibus quia quas. Similique
+                                doloremque et accusantium facilis expedita inventore, laborum reiciendis atque
+                                perferendis tempora repellendus accusamus magnam nulla porro! Doloremque ut, neque illo
+                                natus, sapiente corrupti ex molestias nostrum corporis, ullam modi! Quia iste iusto
+                                voluptas recusandae minus placeat maiores quaerat impedit vero architecto repellendus ab
+                                officiis officia, quae non, inventore fugit temporibus eligendi accusamus. Hic cum
+                                quisquam ea sunt, sint numquam, explicabo velit dolores voluptates necessitatibus nihil.
+                                Quia assumenda vel dolorum impedit veritatis!</p>
+                        </div>
+                    </div>
+                    <div class="preview">
+                        <div class="top-header">
+                            <p class="main-heading-small">preview</p>
+                            <span class="material-symbols-rounded">
+                                visibility
+                            </span>
+                            <!-- <span class="material-symbols-rounded">
+                                    visibility_off
+                                    </span> -->
+                        </div>
+                        <div class="preview-text">
+                            <h1 class="h1-heading">Welcome to Markdown</h1>
+                            <p class="normal-text">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet vero, maxime nam impedit
+                                quas dolores animi unde veniam magnam necessitatibus.
+                            </p>
+                            <h2 class="h2-heading">
+                                How to use this ?
+                            </h2>
+                            <ol class="ordered-list">
+                                <li>Write down soemthing on markdown section</li>
+                                <li>This will produce soemthing like this in preview section</li>
+                            </ol>
+
+                            <h3 class="h3-heading">
+                                Features
+                            </h3>
+
+                            <ul class="unordered-list">
+                                <li>Create soemthing amazing here</li>
+                                <li>Create soemthing different</li>
+                                <li>Create special here</li>
+                                <li>Dont create here</li>
+                            </ul>
+
+                            <div class="block-quote">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, quam cum optio, ab
+                                    ipsam itaque nostrum nemo nobis mollitia illo doloribus quisquam laboriosam laborum
+                                    asperiores rerum sunt corrupti rem! Natus commodi ab velit quis?</p>
+                            </div>
+
+                            <h4>Code Block</h4>
+                            <div class="code-block">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Side bar menu -->
+            <div class="side-menu">
+                <div class="about-editor">
+                    <h1>About Editor</h1>
+                    <p>
+                        This is editor is created using HTML, Css and Vanilla JavaScript
+                    </p>
+                </div>
+
+                <ul class="select-themes">
+                    <li>
+                        <span class="material-symbols-rounded dark-icon">
+                            dark_mode
+                        </span>
+                        Dark Theme
+                    </li>
+
+                    <li>
+                        <span class="material-symbols-rounded light-icon">
+                            light_mode
+                        </span>
+                        Light Theme
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
