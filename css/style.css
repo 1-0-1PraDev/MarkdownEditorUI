@@ -18,8 +18,13 @@
     --tab-bg: rgba(30, 31, 35, 1);
     --editor-bg: #15161a;
     --faint-text-clr: #a5a6aa;
+    --save-btn-clr: #fff;
     --text-clr: #feffff;
     --menu-bg: #35383f;
+    --header-title-clr: #a5a6aa;
+    --main-heading-clr: #a5a6aa;
+    --faint-clr-two: rgba(255, 255, 255, 0.6);
+    --side-menu-clr: #fff;
 }
 
 /* Works on Firefox */
@@ -74,7 +79,7 @@ html{
     /* padding: 1rem; */
     height: 100%;
     background: var(--top-file-bar-bg);
-    color: var(--text-clr);
+    color: var(--side-menu-clr);
     z-index: 9999999;
     transition: 0.5s;
 }
@@ -111,11 +116,6 @@ html{
     background: var(--save-btn-bg);
 }
 
-
-/* html{
-    filter: invert(0) hue-rotate(-160deg); 
-} */
-
 .main-container .container .editor .topBar {
     display: flex;
     padding: 1rem 0.5rem;
@@ -124,6 +124,7 @@ html{
     z-index: 999999999;
     justify-content: space-between;
     background: var(--top-file-bar-bg);
+    color: var(--body-bg);
     box-shadow: 10px 10px 23px rgba(30, 31, 35, 0.7);
 }
 
@@ -182,7 +183,7 @@ html{
 }
 
 .main-container .container .editor .topBar .leftBx .file-details .file-name-cont p {
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--faint-clr-two);
     font-size: 0.8rem;
     margin: 0.2rem 0rem;
 }
@@ -214,7 +215,7 @@ html{
     text-decoration: none;
     font-size: 1.3rem;
     font-weight: 600;
-    color: #fff;
+    color: var(--save-btn-clr);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -250,6 +251,11 @@ html{
     color: var(--faint-text-clr);
 }
 
+.editor .content-container .preview{
+    color: var(--faint-text-clr);
+    background: var(--editor-bg);
+}
+
 .editor .content-container .top-header{
     width: 100%;
     background: var(--tab-bg);
@@ -267,10 +273,15 @@ html{
 .editor .content-container .main-heading-small{
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: var(--faint-text-clr);
+    color: var(--main-heading-clr);
     background: var(--tab-bg);
     font-weight: 600;
     font-size: 1.8rem;
+}
+
+
+.editor .content-container .main-heading-small span{
+    color: var(--header-title-clr);
 }
 
 .editor .content-container .editor-text, .preview-text{
@@ -318,12 +329,12 @@ html{
         display: none;
     }
 
-    .main-container .container .editor .topBar .leftBx .menuBx .bar {
+    /* .main-container .container .editor .topBar .leftBx .menuBx .bar {
         width: 35px;
         height: 3px;
         background: #fff;
         box-shadow: 0px 10px 0px 0.008rem #fff;
-    }
+    } */
 
     .main-container .container .editor .topBar .rightBx .deleteIcon span {
         font-size: 2.4rem;
